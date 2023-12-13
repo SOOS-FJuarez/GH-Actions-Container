@@ -1,5 +1,5 @@
 on: [push]
-
+ 
 jobs:
   soos_csa_analysis:
     name: SOOS CSA Analysis
@@ -10,6 +10,6 @@ jobs:
         with:
           client_id: ${{ secrets.SOOS_CLIENT_ID }}
           api_key: ${{ secrets.SOOS_API_KEY }}
-          project_name: "GH Actions - CSA"
-          api_url: "https://qa-api.soos.io/api/"
+          api_url: "https://qa-api.soos.io/api/"	
+          project_name: "GH-Actions CSA"
           target_image: "ericallard/elasticsearch:vulnerable"
