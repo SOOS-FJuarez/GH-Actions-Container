@@ -11,4 +11,5 @@ jobs:
           client_id: ${{ secrets.SOOS_CLIENT_ID }}
           api_key: ${{ secrets.SOOS_API_KEY }}
           project_name: "GH Actions - CSA"
+          api_url: "https://qa-api.soos.io/api/"
       	  target_image: "ericallard/elasticsearch:vulnerable"
