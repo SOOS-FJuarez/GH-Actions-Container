@@ -12,6 +12,6 @@ jobs:
           api_key: ${{ secrets.SOOS_API_KEY }}
           api_url: "https://qa-api.soos.io/api/"	
           project_name: "GH Actions- CSA"
-          target_image: "alpine"
+          target_image: "python:3.9.19-bookworm"
           image_tag: latest
           log_level: DEBUG
