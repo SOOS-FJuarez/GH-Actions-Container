@@ -12,6 +12,6 @@ jobs:
           api_key: ${{ secrets.SOOS_API_KEY }}
           api_url: "https://qa-api.soos.io/api/"	
           project_name: "GH Actions- CSA"
-          target_image: "alpine 2"
+          target_image: "alpine-test-old"
           #csa_version: latest
           log_level: DEBUG
