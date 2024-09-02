@@ -13,5 +13,5 @@ jobs:
           api_url: "https://qa-api.soos.io/api/"	
           project_name: "GH Actions- CSA"
           target_image: "alpine 2"
-          csa_version: latest
+          #csa_version: latest
           log_level: DEBUG
