@@ -19,6 +19,7 @@ jobs:
           #image_tag: alpha
           log_level: INFO
           verbose: true
+          output_format: SARIF
       - name: Upload SOOS DAST SARIF Report
         uses: github/codeql-action/upload-sarif@v3
         with:
