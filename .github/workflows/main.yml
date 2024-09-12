@@ -1,22 +1,17 @@
 on: [push]
  
 jobs:
-  soos:
-    permissions:
-      security-events: write # for uploading code scanning alert info
-      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
+  soos_csa_analysis:
     name: SOOS CSA Analysis
     runs-on: ubuntu-latest
     steps:
       - name: Run SOOS CSA Analysis
-        uses: soos-io/soos-csa-github-action@9e58f2457728bdba68bbdaeae24b83197bb7196d #e2b64298c4dbd380930cb678a4193e0ad1f48486  #v1.0.2 GET Latest Version from https://github.com/marketplace/actions/soos-csa
+        uses: soos-io/soos-csa-github-action@9e58f2457728bdba68bbdaeae24b83197bb7196d #v1.0.2 GET Latest Version from https://github.com/marketplace/actions/soos-csa
         with:
           client_id: ${{ secrets.SOOS_CLIENT_ID }}
           api_key: ${{ secrets.SOOS_API_KEY }}
-          api_url: "https://qa-api.soos.io/api/"	
-          project_name: "GH Actions- CSA-10-fix"
+          api_url: "https://qa-api.soos.io/api/"        
+          project_name: "GH Actions- CSA-12"
           target_image: "debian" 
           image_tag: alpha
-          log_level: DEBUG
-          output_format: SARIF
-          branch_name: CSA-test-branch
+          log_level: WARN
