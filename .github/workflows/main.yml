@@ -13,6 +13,6 @@ jobs:
           api_url: "https://qa-api.soos.io/api/"	
           project_name: "GH Actions- CSA-7"
           target_image: "debian" 
-          image_tag: alpha
+          image_tag: latest
           output_format: "NONE"
 
