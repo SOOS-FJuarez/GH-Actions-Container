@@ -17,6 +17,6 @@ jobs:
           project_name: "GH Actions- CSA-10-fix"
           target_image: "debian" 
           image_tag: alpha
-          log_level: WARN
+          log_level: DEBUG
           output_format: SARIF
           branch_name: CSA-test-branch
