@@ -11,8 +11,8 @@ jobs:
           client_id: ${{ secrets.SOOS_CLIENT_ID }}
           api_key: ${{ secrets.SOOS_API_KEY }}
           api_url: "https://qa-api.soos.io/api/"	
-          project_name: "GH Actions- CSA-7"
+          project_name: "GH Actions- CSA-8"
           target_image: "debian" 
-          image_tag: latest
-          output_format: "NONE"
+          image_tag: alpha
+          output_format: SPDX
 
