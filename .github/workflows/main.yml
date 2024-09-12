@@ -14,5 +14,5 @@ jobs:
           project_name: "GH Actions- CSA-7"
           target_image: "debian" 
           image_tag: alpha
-          output_format: NONE
+          output_format: "NONE"
 
