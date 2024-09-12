@@ -15,4 +15,3 @@ jobs:
           target_image: "debian" 
           image_tag: alpha
           log_level: DEBUG
-          output_format: SARIF
