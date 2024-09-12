@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run SOOS CSA Analysis
-        uses: soos-io/soos-csa-github-action@0cb349f45b9379be87476dbeb78bd7ba930eef28 #v1.0.2 GET Latest Version from https://github.com/marketplace/actions/soos-csa
+        uses: soos-io/soos-csa-github-action@v1 #v1.0.2 GET Latest Version from https://github.com/marketplace/actions/soos-csa
         with:
           client_id: ${{ secrets.SOOS_CLIENT_ID }}
           api_key: ${{ secrets.SOOS_API_KEY }}
           api_url: "https://qa-api.soos.io/api/"        
-          project_name: "GH Actions- CSA-14"
-          target_image: "debian"  
+          project_name: "GH Actions- CSA-PROD"
+          target_image: "ericallard/elasticsearch:x86"  
           image_tag: alpha
           log_level: DEBUG
           output_format: SARIF
