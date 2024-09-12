@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run SOOS CSA Analysis
-        uses: soos-io/soos-csa-github-action@9e58f2457728bdba68bbdaeae24b83197bb7196d #v1.0.2 GET Latest Version from https://github.com/marketplace/actions/soos-csa
+        uses: soos-io/soos-csa-github-action@0cb349f45b9379be87476dbeb78bd7ba930eef28 #v1.0.2 GET Latest Version from https://github.com/marketplace/actions/soos-csa
         with:
           client_id: ${{ secrets.SOOS_CLIENT_ID }}
           api_key: ${{ secrets.SOOS_API_KEY }}
