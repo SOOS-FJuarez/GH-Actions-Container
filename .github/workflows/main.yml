@@ -11,8 +11,9 @@ jobs:
           client_id: ${{ secrets.SOOS_CLIENT_ID }}
           api_key: ${{ secrets.SOOS_API_KEY }}
           api_url: "https://qa-api.soos.io/api/"	
-          project_name: "GH Actions- CSA-9"
+          project_name: "GH Actions- CSA-10"
           target_image: "debian" 
           image_tag: alpha
-          on_failure: continue_on_failure
-          other_options: "-o cyclonedx-xml"
+          log_level: WARN
+          branch_name: CSA-test-branch
+          output_format: SARIF
