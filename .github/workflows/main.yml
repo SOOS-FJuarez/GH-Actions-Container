@@ -15,7 +15,7 @@ jobs:
           api_key: ${{ secrets.SOOS_API_KEY }}
           api_url: "https://qa-api.soos.io/api/"        
           project_name: "GH Actions- CSA-14"
-          target_image: "debian" 
+          target_image: "debian"  
           image_tag: alpha
           log_level: DEBUG
           output_format: SARIF
