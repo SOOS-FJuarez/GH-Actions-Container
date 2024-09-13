@@ -15,8 +15,8 @@ jobs:
           api_key: ${{ secrets.SOOS_API_KEY }}
           #api_url: "https://qa-api.soos.io/api/"        
           project_name: "GH Actions- CSA-PROD"
-          target_image: "ericallard/elasticsearch:x86"  
-          #image_tag: alpha
+          target_image: "debian"  
+          image_tag: latest
           log_level: INFO
           verbose: true
           output_format: SARIF
