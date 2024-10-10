@@ -19,7 +19,7 @@ jobs:
           image_tag: beta
           log_level: DEBUG
           verbose: true
-          output_format: SARIF
+          output_format: SPDX
       - name: Upload SOOS DAST SARIF Report
         uses: github/codeql-action/upload-sarif@v3
         with:
