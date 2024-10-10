@@ -18,8 +18,7 @@ jobs:
           target_image: "debian"  
           image_tag: beta
           log_level: DEBUG
-          verbose: true
-          output_format: SPDX
+          output_format: SARIF
       - name: Upload SOOS DAST SARIF Report
         uses: github/codeql-action/upload-sarif@v3
         with:
