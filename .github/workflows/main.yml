@@ -23,33 +23,13 @@ jobs:
           #output_directory: output
 
 
-        # Cargar el directorio generado como artefacto
       - uses: actions/upload-artifact@v4
         with:
-            name: sbom-analysis-output
-            path: |
-                /usr/src/app/*.cdx.json
-                /usr/src/app/*.cdx.xml
-                /usr/src/app/*.spdx.json
-                /usr/src/app/*.spdx.txt
-                /usr/src/app/*.sarif.json
-                /usr/src/app/*.csafvex.json
-                /usr/src/app/*.sooslicenses.html
-                /usr/src/app/*.sooslicenses.csv
-                /usr/src/app/*.soospackages.html
-                /usr/src/app/*.soospackages.csv
-                /usr/src/app/*.soosvulnerabilities.html
-                /usr/src/app/*.soosvulnerabilities.csv
-                /usr/src/app/*.soosissues.html
-                /usr/src/app/*.soosissues.csv        
-
-      - name: Get SARIF file
-        id: get-sarif
-        run: |
-            FILE=$(ls /usr/src/app/*.sarif.json | head -n 1) 
-            echo "sarif_file=$FILE" >> $GITHUB_ENV
-          
-      - name: Upload SOOS SARIF Report
+          name: 'reports'
+          path: '*'
+      - name: Rename file 
+        run: mv *.sarif.json results.sarif
+      - name: Upload SOOS DAST SARIF Report
         uses: github/codeql-action/upload-sarif@v3
         with:
-          sarif_file: ${{ env.sarif_file }}
+          sarif_file: results.sarif
