@@ -20,7 +20,7 @@ jobs:
           log_level: DEBUG
           export_format: SARIF
           export_file_type: JSON
-          output_directory: output
+          #output_directory: output
 
 
         # Cargar el directorio generado como artefacto
@@ -28,25 +28,25 @@ jobs:
         with:
             name: sbom-analysis-output
             path: |
-                /usr/src/app/output/*.cdx.json
-                /usr/src/app/output/*.cdx.xml
-                /usr/src/app/output/*.spdx.json
-                /usr/src/app/output/*.spdx.txt
-                /usr/src/app/output/*.sarif.json
-                /usr/src/app/output/*.csafvex.json
-                /usr/src/app/output/*.sooslicenses.html
-                /usr/src/app/output/*.sooslicenses.csv
-                /usr/src/app/output/*.soospackages.html
-                /usr/src/app/output/*.soospackages.csv
-                /usr/src/app/output/*.soosvulnerabilities.html
-                /usr/src/app/output/*.soosvulnerabilities.csv
-                /usr/src/app/output/*.soosissues.html
-                /usr/src/app/output/*.soosissues.csv        
+                /usr/src/app/*.cdx.json
+                /usr/src/app/*.cdx.xml
+                /usr/src/app/*.spdx.json
+                /usr/src/app/*.spdx.txt
+                /usr/src/app/*.sarif.json
+                /usr/src/app/*.csafvex.json
+                /usr/src/app/*.sooslicenses.html
+                /usr/src/app/*.sooslicenses.csv
+                /usr/src/app/*.soospackages.html
+                /usr/src/app/*.soospackages.csv
+                /usr/src/app/*.soosvulnerabilities.html
+                /usr/src/app/*.soosvulnerabilities.csv
+                /usr/src/app/*.soosissues.html
+                /usr/src/app/*.soosissues.csv        
 
       - name: Get SARIF file
         id: get-sarif
         run: |
-            FILE=$(ls /usr/src/app/output/*.sarif.json | head -n 1) 
+            FILE=$(ls /usr/src/app/*.sarif.json | head -n 1) 
             echo "sarif_file=$FILE" >> $GITHUB_ENV
           
       - name: Upload SOOS SARIF Report
