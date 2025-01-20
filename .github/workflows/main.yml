@@ -28,25 +28,25 @@ jobs:
         with:
             name: sbom-analysis-output
             path: |
-                ${{ github.workspace }}/output/*.cdx.json
-                ${{ github.workspace }}/output/*.cdx.xml
-                ${{ github.workspace }}/output/*.spdx.json
-                ${{ github.workspace }}/output/*.spdx.txt
-                ${{ github.workspace }}/output/*.sarif.json
-                ${{ github.workspace }}/output/*.csafvex.json
-                ${{ github.workspace }}/output/*.sooslicenses.html
-                ${{ github.workspace }}/output/*.sooslicenses.csv
-                ${{ github.workspace }}/output/*.soospackages.html
-                ${{ github.workspace }}/output/*.soospackages.csv
-                ${{ github.workspace }}/output/*.soosvulnerabilities.html
-                ${{ github.workspace }}/output/*.soosvulnerabilities.csv
-                ${{ github.workspace }}/output/*.soosissues.html
-                ${{ github.workspace }}/output/*.soosissues.csv        
+                /usr/src/app/output/*.cdx.json
+                /usr/src/app/output/*.cdx.xml
+                /usr/src/app/output/*.spdx.json
+                /usr/src/app/output/*.spdx.txt
+                /usr/src/app/output/*.sarif.json
+                /usr/src/app/output/*.csafvex.json
+                /usr/src/app/output/*.sooslicenses.html
+                /usr/src/app/output/*.sooslicenses.csv
+                /usr/src/app/output/*.soospackages.html
+                /usr/src/app/output/*.soospackages.csv
+                /usr/src/app/output/*.soosvulnerabilities.html
+                /usr/src/app/output/*.soosvulnerabilities.csv
+                /usr/src/app/output/*.soosissues.html
+                /usr/src/app/output/*.soosissues.csv        
 
       - name: Get SARIF file
         id: get-sarif
         run: |
-            FILE=$(ls ${{ github.workspace }}/output/*.sarif.json | head -n 1) 
+            FILE=$(ls /usr/src/app/output/*.sarif.json | head -n 1) 
             echo "sarif_file=$FILE" >> $GITHUB_ENV
           
       - name: Upload SOOS SARIF Report
